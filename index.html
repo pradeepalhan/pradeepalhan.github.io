@@ -120,6 +120,7 @@
   }
   .pillar-q { color: var(--muted); font-size: .78rem; font-style: italic; margin: 0.125rem 0 1rem; }
   .pillar-number { color: var(--ink); font: 500 2.35rem/1 var(--serif); letter-spacing: -.04em; }
+  .pillar-number--text { font-size: 1.55rem; line-height: 1.15; letter-spacing: -.02em; }
   .pillar-number small { font-size: .55em; letter-spacing: -.01em; color: var(--muted); }
   .pillar-caption { font-weight: 700; font-size: .88rem; margin-top: 0.5rem; line-height: 1.4; }
   .pillar ul { list-style: none; padding: 0.875rem 0 0; margin: 0.875rem 0 0; border-top: 1px solid var(--line); flex: 1; }
@@ -201,7 +202,7 @@
   .experience-toggle .experience { display: block; margin: 0; padding: 1.25rem 1.25rem 1.5rem; border: 0; max-width: 54rem; }
 
   /* Approach */
-  .approach { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .approach { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
   .approach-card { background: var(--panel); border: 1px solid var(--line); border-radius: 0.875rem; padding: 1.375rem 1.5rem; }
   .approach-card h3 { font: 500 1.2rem/1.25 var(--serif); margin: 0 0 0.5rem; }
   .approach-card p { color: var(--muted); margin: 0; font-size: .92rem; }
@@ -286,7 +287,7 @@
 
   @media (max-width: 960px) {
     .pillars { grid-template-columns: repeat(2, 1fr); }
-    .approach { grid-template-columns: 1fr; }
+    .approach { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 760px) {
     .page { padding: 1.375rem 1rem 2.625rem; }
@@ -300,6 +301,7 @@
     .experience { grid-template-columns: 1fr; gap: 0.875rem; }
     .personal-intro { grid-template-columns: 1fr; }
     .journal-grid, .journal-grid--two { grid-template-columns: 1fr; }
+    .approach { grid-template-columns: 1fr; }
     .journal-grid--two .rotator { height: 16.25rem; }
     .journal-card img, .rotator { height: 16.25rem; }
     .recognition-lead { flex-direction: column; align-items: flex-start; gap: 0.625rem; }
@@ -402,7 +404,7 @@
   <section class="pillars" aria-label="Key achievements by discipline">
     <article class="pillar">
       <div class="pillar-label">Engineering</div>
-      <div class="pillar-q">How I build</div>
+      <div class="pillar-q">What I deliver</div>
       <div class="pillar-number">60%</div>
       <div class="pillar-caption">faster payment jobs, one of several 50%+ runtime cuts</div>
       <ul>
@@ -414,15 +416,16 @@
     </article>
     <article class="pillar">
       <div class="pillar-label">Technology</div>
-      <div class="pillar-q">What I bring in</div>
-      <div class="pillar-number">#1 <small>of 60+</small></div>
-      <div class="pillar-caption">teams in a company-wide AI hackathon</div>
+      <div class="pillar-q">How I build</div>
+      <div class="pillar-number pillar-number--text">Native by design</div>
+      <div class="pillar-caption">four principles in every system I build</div>
       <ul>
-        <li><strong>80% lower</strong> development cost through AI-led DSP development</li>
-        <li><strong>RAG</strong> on production codebases; building with <strong>agentic AI</strong></li>
-        <li>AI-assisted QA platform, <strong>90%+</strong> bill matching in feasibility demos</li>
+        <li><strong>SaaS-native:</strong> one platform, many clients; configured, not forked</li>
+        <li><strong>Agile:</strong> CI/CD and small, tested increments to production</li>
+        <li><strong>AI-native:</strong> RAG, agentic AI and AI-led development</li>
+        <li><strong>High-performance:</strong> real-time charging, JVM/IMDG tuning, 50%+ runtime cuts</li>
       </ul>
-      <div class="pillar-where">See <a href="#exp-mphasis">Mphasis</a> · <a href="#exp-peopletech">PeopleTech</a></div>
+      <div class="pillar-where">See <a href="#approach">How I build</a></div>
     </article>
     <article class="pillar">
       <div class="pillar-label">Domain</div>
@@ -553,38 +556,46 @@
       <div class="section-kicker">02 / How I build</div>
       <h2>Deep in the domain.<br>Native to AI and cloud.</h2>
     </div>
-    <p class="approach-lead">I deliver complex systems that live deep inside their domain, from real-time charging and billing to retail fulfilment and in-vehicle software, designed from the start to be <em>AI‑native</em>, <em>cloud‑native</em> and <em>run as a service</em>.</p>
+    <p class="approach-lead">I deliver complex systems that live deep inside their domain, from real-time charging and billing to retail fulfilment and in-vehicle software, built on four principles: <em>SaaS‑native</em>, <em>agile</em>, <em>AI‑native</em> and <em>high‑performance</em>.</p>
     <div class="approach">
       <div class="approach-card">
-        <div class="approach-tag">AI-native</div>
-        <h3>AI in the system and in how it’s built</h3>
-        <p>Not bolted on at the end: designed into the product and into the engineering workflow.</p>
-        <ul>
-          <li>RAG over production codebases</li>
-          <li>AI-assisted QA for bill-PDF validation</li>
-          <li><strong>80%</strong> lower development cost through AI-led development</li>
-          <li><strong>#1 of 60+</strong> teams, TechShift AI Hackathon</li>
-        </ul>
-      </div>
-      <div class="approach-card">
-        <div class="approach-tag">Cloud-native</div>
-        <h3>Containerised, automated, built to scale out</h3>
-        <p>Systems that deploy repeatably and scale with the workload, not with manual effort.</p>
-        <ul>
-          <li>Dockerized, Dask-driven fulfilment engine on <strong>Azure</strong></li>
-          <li>CI/CD with GitHub Actions; deployment packaging to UAT</li>
-          <li>Repeated <strong>50%+</strong> runtime reductions</li>
-          <li>Self-maintaining runbooks across all active versions</li>
-        </ul>
-      </div>
-      <div class="approach-card">
-        <div class="approach-tag">SaaS</div>
+        <div class="approach-tag">SaaS-native</div>
         <h3>One platform, many customers</h3>
-        <p>Built to be configured rather than forked, and operated reliably across client environments.</p>
+        <p>Cloud-hosted, configured rather than forked, and operated reliably across client environments.</p>
         <ul>
           <li>Blue Yonder <strong>Luminate</strong> across multiple client environments</li>
           <li>Amdocs products serving <strong>60+</strong> global clients</li>
-          <li>Live production support for leading APAC telcos</li>
+          <li>Dockerized, Dask-driven fulfilment engine on <strong>Azure</strong></li>
+        </ul>
+      </div>
+      <div class="approach-card">
+        <div class="approach-tag">Agile</div>
+        <h3>Small, tested increments</h3>
+        <p>Automated pipelines that keep every change releasable and every release documented.</p>
+        <ul>
+          <li>CI/CD with GitHub Actions; deployment packaging to UAT</li>
+          <li>Self-maintaining runbooks across all active versions</li>
+          <li>Continuous build and release for Amdocs Document Designer</li>
+        </ul>
+      </div>
+      <div class="approach-card">
+        <div class="approach-tag">AI-native</div>
+        <h3>AI in the system and in how it’s built</h3>
+        <p>Designed into the product and the engineering workflow, not bolted on at the end.</p>
+        <ul>
+          <li>RAG over production codebases; agentic AI</li>
+          <li>AI-assisted QA for bill-PDF validation</li>
+          <li><strong>80%</strong> lower development cost through AI-led development</li>
+        </ul>
+      </div>
+      <div class="approach-card">
+        <div class="approach-tag">High-performance</div>
+        <h3>Fast, and stays fast under load</h3>
+        <p>Throughput and latency treated as design requirements, from the JVM down to the hypervisor.</p>
+        <ul>
+          <li>Real-time charging and high-volume billing</li>
+          <li>JVM GC and IMDG tuning for Korea Telecom</li>
+          <li>Repeated <strong>50%+</strong> runtime reductions; Wallet capacity on existing hardware</li>
         </ul>
       </div>
     </div>
