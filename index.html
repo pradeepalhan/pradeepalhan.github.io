@@ -227,6 +227,7 @@
     display: flex; gap: 1.375rem; align-items: center; background: var(--panel); border: 1px solid var(--line);
     border-left: 0.25rem solid var(--accent-2); border-radius: 0.875rem; padding: 1.25rem 1.5rem; margin-bottom: 1.125rem;
   }
+  .recog-photo { width: 8.5rem; height: 11rem; object-fit: cover; object-position: 50% 30%; border-radius: 0.625rem; flex: none; }
   .recognition-lead .big { font: 500 2.4rem/1 var(--serif); color: var(--accent); letter-spacing: -.04em; white-space: nowrap; }
   .recognition-lead p { margin: 0; color: #485560; }
   .recognition-lead strong { color: var(--ink); }
@@ -251,6 +252,8 @@
   }
   .personal-intro p { color: #53606b; margin: 0; max-width: 42.5rem; }
   .journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .journal-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .journal-grid--two .rotator { height: 20rem; }
   .journal-card {
     overflow: hidden; border: 1px solid var(--line); border-radius: 1rem;
     background: var(--panel); display: flex; flex-direction: column;
@@ -296,7 +299,8 @@
     .section-head { grid-template-columns: 1fr; gap: 0.75rem; }
     .experience { grid-template-columns: 1fr; gap: 0.875rem; }
     .personal-intro { grid-template-columns: 1fr; }
-    .journal-grid { grid-template-columns: 1fr; }
+    .journal-grid, .journal-grid--two { grid-template-columns: 1fr; }
+    .journal-grid--two .rotator { height: 16.25rem; }
     .journal-card img, .rotator { height: 16.25rem; }
     .recognition-lead { flex-direction: column; align-items: flex-start; gap: 0.625rem; }
     .closing { align-items: flex-start; flex-direction: column; padding: 1.75rem 1.5rem; }
@@ -610,6 +614,7 @@
       <h2>Good work, recognised.</h2>
     </div>
     <div class="recognition-lead">
+      <img class="recog-photo" src="assets/techshift.jpg" alt="Pardeep on stage at the Mphasis TechShift Innovation Awards" loading="lazy">
       <div class="big">1st</div>
       <p><strong>Winner, TechShift AI Hackathon</strong>: placed first among 60+ teams in a company-wide hackathon.</p>
     </div>
@@ -617,7 +622,7 @@
       <li>Recognised for technical contributions and client delivery across enterprise software engagements.</li>
       <li>Selected for the Kendriya Vidyalaya National Sports Meet in volleyball.</li>
       <li>Led volunteer voter-registration activities supporting more than 10,000 registrations.</li>
-      <li>Certified yoga teacher (Kaivalyadhama, Lonavla); teaches at NKBA Badminton Academy.</li>
+      <li>YCB Level 2 certified yoga teacher, trained at Kaivalyadhama, Lonavla; taught at NKBA Badminton Academy.</li>
     </ul>
   </section>
 
@@ -654,14 +659,20 @@
       </div>
       <p>It started on the volleyball court, where I was selected for the Kendriya Vidyalaya Nationals. Today it’s triathlon, long rides and runs, time in the mountains, and the practice and teaching of yoga. These pursuits have their own place in my life, and they shape how I work: training for the long effort, staying calm under load, and going back to fundamentals when something isn’t working.</p>
     </div>
-    <div class="journal-grid">
-      <details class="journal-card"><summary><img src="assets/triathlon.jpg" alt="Pardeep at a triathlon finish area with his road bicycle" loading="lazy"><div class="journal-copy"><div class="journal-tag">Endurance</div><h3>Triathlon &amp; cycling</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">Training, race-day experiences and the gradual process of finding out what the body can do.</p></details>
-      <details class="journal-card"><summary><img src="assets/running.jpg" alt="Pardeep running during an endurance event" loading="lazy"><div class="journal-copy"><div class="journal-tag">On the move</div><h3>Running &amp; the outdoors</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">Long efforts, open roads and time spent moving through the world at a different pace.</p></details>
+    <div class="journal-grid journal-grid--two">
+      <details class="journal-card"><summary><div class="rotator" aria-label="Endurance photos">
+        <figure class="is-active"><img src="assets/triathlon.jpg" alt="Pardeep at a Bergmann triathlon finish with his road bike" loading="lazy" style="object-position: 50% 45%"><figcaption>Triathlon finish, Bergmann</figcaption></figure>
+        <figure><img src="assets/running.jpg" alt="Pardeep running at a Bergmann endurance event" loading="lazy" style="object-position: 55% 40%"><figcaption>On the run, Bergmann</figcaption></figure>
+        <figure><img src="assets/endurance-hills.jpg" alt="Pardeep on a long ride in the hills" loading="lazy" style="object-position: 40% 35%"><figcaption>Long rides in the hills</figcaption></figure>
+      </div><div class="journal-copy"><div class="journal-tag">Endurance</div><h3>Triathlons, BRMs &amp; marathons</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">Triathlons, BRM brevets and marathons: long efforts that reward patient training, pacing and finding out what the body can do.</p></details>
       <details class="journal-card"><summary><div class="rotator" aria-label="Yoga photos">
-        <figure class="is-active"><img src="assets/yoga.jpg" alt="A group yoga session at NKBA Badminton Academy" loading="lazy"><figcaption>Teaching at NKBA Badminton Academy</figcaption></figure>
+        <figure class="is-active"><img src="assets/yoga-teacher.jpg" alt="Pardeep receiving his yoga teacher certification at Kaivalyadhama" loading="lazy" style="object-position: 40% 45%"><figcaption>Teacher certification, Kaivalyadhama</figcaption></figure>
+        <figure><img src="assets/yoga-nkba-adults.jpg" alt="An adult yoga class at NKBA Badminton Academy" loading="lazy"><figcaption>Adult batch, NKBA Badminton Academy</figcaption></figure>
+        <figure><img src="assets/yoga-nkba-kids.jpg" alt="Pardeep leading a children's yoga class at NKBA Badminton Academy" loading="lazy" style="object-position: 60% 50%"><figcaption>Junior batch, NKBA Badminton Academy</figcaption></figure>
+        <figure><img src="assets/yoga.jpg" alt="Group photo after a yoga session at NKBA Badminton Academy" loading="lazy"><figcaption>With the NKBA juniors</figcaption></figure>
         <figure><img src="assets/yoga-meditation.jpg" alt="Pardeep receiving a certificate for the Dhyan and Kriya Yoga workshop at Kaivalyadhama" loading="lazy" style="object-position: 45% 40%"><figcaption>Dhyan &amp; Kriya Yoga workshop, Kaivalyadhama</figcaption></figure>
-        <figure><img src="assets/yoga-teacher.jpg" alt="Pardeep receiving his yoga teacher certification at Kaivalyadhama" loading="lazy" style="object-position: 40% 45%"><figcaption>Yoga teacher certification, Kaivalyadhama</figcaption></figure>
-      </div><div class="journal-copy"><div class="journal-tag">Practice &amp; teaching</div><h3>Yoga</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">A certified yoga teacher trained at Kaivalyadhama, Lonavla, including the Dhyan &amp; Kriya Yoga workshop on meditation. I teach at NKBA Badminton Academy, and the practice keeps making room for both discipline and curiosity.</p></details>
+      </div><div class="journal-copy"><div class="journal-tag">Practice &amp; teaching</div><h3>Yoga</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">YCB Level 2 certified yoga teacher, trained at Kaivalyadhama, Lonavla, including the Dhyan &amp; Kriya Yoga workshop on meditation. I taught adult and junior batches at NKBA Badminton Academy; the practice keeps making room for both discipline and curiosity.</p></details>
+      <!-- Third tile (Motorcycling & trekking) goes here once photos are available; then drop journal-grid--two. -->
     </div>
     <p class="journal-note">A living collection of experiences, stories and photographs.</p>
   </section>
