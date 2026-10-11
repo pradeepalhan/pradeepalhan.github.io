@@ -257,6 +257,20 @@
   }
   .journal-card[open] { border-color: #b7c9c2; }
   .journal-card img { display: block; width: 100%; height: 15.3125rem; object-fit: cover; }
+  .rotator { position: relative; height: 15.3125rem; overflow: hidden; background: var(--soft); }
+  .rotator figure { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity .9s ease; }
+  .rotator figure.is-active { opacity: 1; }
+  .journal-card .rotator img { height: 100%; }
+  .rotator figcaption {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 1.75rem 0.875rem 0.625rem;
+    background: linear-gradient(transparent, rgba(20, 28, 34, .62)); color: #fff; font-size: .78rem; font-weight: 600; letter-spacing: .01em;
+  }
+  .rotator-dots { position: absolute; top: 0.625rem; right: 0.625rem; display: flex; gap: 0.375rem; z-index: 2; }
+  .rotator-dots button {
+    width: 0.5rem; height: 0.5rem; padding: 0; border-radius: 50%; border: 1px solid rgba(255,255,255,.9);
+    background: rgba(255,255,255,.35); cursor: pointer;
+  }
+  .rotator-dots button[aria-current="true"] { background: #fff; }
   .journal-card .journal-copy { padding: 1.25rem 1.25rem 1.375rem; }
   .journal-card .journal-tag {
     color: var(--accent); font-size: .68rem; text-transform: uppercase;
@@ -283,7 +297,7 @@
     .experience { grid-template-columns: 1fr; gap: 0.875rem; }
     .personal-intro { grid-template-columns: 1fr; }
     .journal-grid { grid-template-columns: 1fr; }
-    .journal-card img { height: 16.25rem; }
+    .journal-card img, .rotator { height: 16.25rem; }
     .recognition-lead { flex-direction: column; align-items: flex-start; gap: 0.625rem; }
     .closing { align-items: flex-start; flex-direction: column; padding: 1.75rem 1.5rem; }
     footer { flex-direction: column; }
@@ -324,7 +338,8 @@
     .experience { grid-template-columns: 9.6875rem 1fr; gap: 1.25rem; padding-bottom: 0.875rem; margin-bottom: 0.875rem; break-inside: avoid; }
     .approach-card { break-inside: avoid; padding: 0.875rem; }
     .journal-grid { gap: 0.5rem; }
-    .journal-card img { height: 8.125rem; }
+    .journal-card img, .rotator { height: 8.125rem; }
+    .rotator figure:not(.is-active), .rotator-dots { display: none; }
     .closing { margin-top: 1.875rem; padding: 1.375rem; break-inside: avoid; }
     a { text-decoration: none; }
   }
@@ -602,7 +617,7 @@
       <li>Recognised for technical contributions and client delivery across enterprise software engagements.</li>
       <li>Selected for the Kendriya Vidyalaya National Sports Meet in volleyball.</li>
       <li>Led volunteer voter-registration activities supporting more than 10,000 registrations.</li>
-      <li>Yoga teaching experience at NKBA Badminton Academy; further yoga education through Kaivalyadhama.</li>
+      <li>Certified yoga teacher (Kaivalyadhama, Lonavla); teaches at NKBA Badminton Academy.</li>
     </ul>
   </section>
 
@@ -642,7 +657,11 @@
     <div class="journal-grid">
       <details class="journal-card"><summary><img src="assets/triathlon.jpg" alt="Pardeep at a triathlon finish area with his road bicycle" loading="lazy"><div class="journal-copy"><div class="journal-tag">Endurance</div><h3>Triathlon &amp; cycling</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">Training, race-day experiences and the gradual process of finding out what the body can do.</p></details>
       <details class="journal-card"><summary><img src="assets/running.jpg" alt="Pardeep running during an endurance event" loading="lazy"><div class="journal-copy"><div class="journal-tag">On the move</div><h3>Running &amp; the outdoors</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">Long efforts, open roads and time spent moving through the world at a different pace.</p></details>
-      <details class="journal-card"><summary><img src="assets/yoga.jpg" alt="A group participating in a yoga session at a sports academy" loading="lazy"><div class="journal-copy"><div class="journal-tag">Practice &amp; teaching</div><h3>Yoga</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">Learning, teaching and continuing to explore a practice that makes room for both discipline and curiosity.</p></details>
+      <details class="journal-card"><summary><div class="rotator" aria-label="Yoga photos">
+        <figure class="is-active"><img src="assets/yoga.jpg" alt="A group yoga session at NKBA Badminton Academy" loading="lazy"><figcaption>Teaching at NKBA Badminton Academy</figcaption></figure>
+        <figure><img src="assets/yoga-meditation.jpg" alt="Pardeep receiving a certificate for the Dhyan and Kriya Yoga workshop at Kaivalyadhama" loading="lazy" style="object-position: 45% 40%"><figcaption>Dhyan &amp; Kriya Yoga workshop, Kaivalyadhama</figcaption></figure>
+        <figure><img src="assets/yoga-teacher.jpg" alt="Pardeep receiving his yoga teacher certification at Kaivalyadhama" loading="lazy" style="object-position: 40% 45%"><figcaption>Yoga teacher certification, Kaivalyadhama</figcaption></figure>
+      </div><div class="journal-copy"><div class="journal-tag">Practice &amp; teaching</div><h3>Yoga</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">A certified yoga teacher trained at Kaivalyadhama, Lonavla, including the Dhyan &amp; Kriya Yoga workshop on meditation. I teach at NKBA Badminton Academy, and the practice keeps making room for both discipline and curiosity.</p></details>
     </div>
     <p class="journal-note">A living collection of experiences, stories and photographs.</p>
   </section>
@@ -716,6 +735,31 @@
     window.addEventListener('resize', onScroll);
     update();
   })();
+  // Photo rotation for Beyond Work tiles with more than one picture.
+  document.querySelectorAll('.rotator').forEach(function (rot) {
+    var figs = rot.querySelectorAll('figure');
+    if (figs.length < 2) return;
+    var i = 0, timer = null, dots = document.createElement('div');
+    dots.className = 'rotator-dots';
+    figs.forEach(function (f, n) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Show photo ' + (n + 1) + ': ' + f.querySelector('figcaption').textContent);
+      b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); show(n); restart(); });
+      dots.appendChild(b);
+    });
+    rot.appendChild(dots);
+    function show(n) {
+      i = (n + figs.length) % figs.length;
+      figs.forEach(function (f, k) { f.classList.toggle('is-active', k === i); });
+      dots.querySelectorAll('button').forEach(function (b, k) { b.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+    }
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function restart() { clearInterval(timer); if (!still) timer = setInterval(function () { show(i + 1); }, 4500); }
+    rot.addEventListener('mouseenter', function () { clearInterval(timer); });
+    rot.addEventListener('mouseleave', restart);
+    show(0); restart();
+  });
 </script>
 </body>
 </html>
