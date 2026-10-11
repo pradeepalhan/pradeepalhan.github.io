@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Pardeep Kumar — Enterprise Software Architect</title>
+<meta name="description" content="Pardeep Kumar — 16+ years designing and building high-volume telecom billing, charging and supply-chain systems, now applying AI to make engineering teams measurably faster.">
+<link rel="canonical" href="https://pradeepalhan.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23315c56'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23fff' text-anchor='middle'%3EPK%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://pradeepalhan.github.io/">
+<meta property="og:title" content="Pardeep Kumar — Enterprise Software Architect">
+<meta property="og:description" content="16+ years designing and building high-volume billing, charging and supply-chain systems, now delivering them AI-native and cloud-native.">
+<meta property="og:image" content="https://pradeepalhan.github.io/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pardeep Kumar — Enterprise Software Architect">
+<meta name="twitter:description" content="16+ years designing and building high-volume billing, charging and supply-chain systems, now delivering them AI-native and cloud-native.">
+<meta name="twitter:image" content="https://pradeepalhan.github.io/assets/og-image.jpg">
+<style>
+  :root {
+    --ink: #202a35;
+    --muted: #687582;
+    --paper: #fbfaf7;
+    --panel: #ffffff;
+    --line: #e7e4dd;
+    --accent: #315c56;
+    --accent-2: #b58a56;
+    --soft: #edf2ef;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--sans); line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration-color: #9bb1aa; text-underline-offset: 3px; }
+  .page { max-width: 1120px; margin: 0 auto; padding: 34px 28px 64px; }
+  .topline {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 4px 0 24px; border-bottom: 1px solid var(--line);
+    color: var(--muted); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  }
+  .topline .mark { display: inline-flex; align-items: center; gap: 10px; }
+  .mark-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent-2); }
+  .topline nav { display: flex; gap: 18px; letter-spacing: .08em; }
+  .topline nav a { text-decoration: none; }
+  .topline nav a:hover { color: var(--accent); }
+
+  /* Hero */
+  .hero {
+    display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr);
+    gap: 56px; align-items: end; padding: 64px 0 46px;
+  }
+  .eyebrow {
+    color: var(--accent); text-transform: uppercase; letter-spacing: .17em;
+    font-size: .73rem; font-weight: 750; margin: 0 0 18px;
+  }
+  h1 {
+    font: 500 clamp(3.2rem, 7vw, 5.8rem)/.98 var(--serif);
+    letter-spacing: -.055em; margin: 0 0 22px; max-width: 780px;
+  }
+  .role {
+    color: var(--accent); font: 500 clamp(1.15rem, 2vw, 1.5rem)/1.4 var(--serif);
+    max-width: 650px; margin: 0 0 18px;
+  }
+  .positioning {
+    font: 500 clamp(1.2rem, 2.1vw, 1.55rem)/1.4 var(--serif); letter-spacing: -.015em;
+    max-width: 680px; margin: 0 0 18px; color: var(--ink);
+  }
+  .positioning em { font-style: normal; color: var(--accent); }
+  .intro { color: #53606b; font-size: 1rem; max-width: 650px; margin: 0; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px;
+    font-size: .88rem; font-weight: 650; text-decoration: none; border: 1px solid var(--accent);
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-ghost { color: var(--accent); background: transparent; }
+  .btn:hover { filter: brightness(1.08); }
+  .contact {
+    border-left: 1px solid var(--line); padding: 8px 0 8px 28px;
+    display: flex; flex-direction: column; gap: 13px; color: var(--muted); font-size: .9rem;
+  }
+  .contact strong { color: var(--ink); display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .13em; margin-bottom: 2px; }
+  .contact a { overflow-wrap: anywhere; }
+  .portrait-wrap { margin-bottom: 8px; }
+  .portrait {
+    display: block; width: 100%; max-width: 250px; aspect-ratio: 1 / 1;
+    object-fit: cover; object-position: center 30%; border-radius: 16px;
+    border: 1px solid var(--line);
+  }
+
+  /* Pillars */
+  .pillars-head {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap;
+    margin: 0 0 14px;
+  }
+  .pillars-head .eyebrow { margin: 0; }
+  .pillars-head span { color: var(--muted); font-size: .82rem; }
+  .pillars {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 18px;
+    overflow: hidden; margin: 0 0 82px;
+  }
+  .pillar {
+    background: var(--panel); padding: 24px 22px 20px; display: flex; flex-direction: column;
+    border-top: 3px solid transparent; transition: border-color .18s ease, background .18s ease;
+  }
+  .pillar:hover { border-top-color: var(--accent-2); background: #fcfdfb; }
+  .pillar-label {
+    color: var(--accent); font-size: .7rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+  }
+  .pillar-q { color: var(--muted); font-size: .78rem; font-style: italic; margin: 2px 0 16px; }
+  .pillar-number { color: var(--ink); font: 500 2.35rem/1 var(--serif); letter-spacing: -.04em; }
+  .pillar-number small { font-size: .55em; letter-spacing: -.01em; color: var(--muted); }
+  .pillar-caption { font-weight: 700; font-size: .88rem; margin-top: 8px; line-height: 1.4; }
+  .pillar ul { list-style: none; padding: 14px 0 0; margin: 14px 0 0; border-top: 1px solid var(--line); flex: 1; }
+  .pillar li { margin: 0 0 9px; padding: 0; font-size: .82rem; line-height: 1.45; color: #485560; }
+  .pillar li strong { color: var(--accent); font-weight: 750; }
+  .pillar-where { margin-top: 12px; font-size: .74rem; color: var(--muted); }
+  .pillar-where a { color: var(--accent); font-weight: 650; }
+
+  /* Sections */
+  /* Scroll: hero headline condenses, compact header takes over */
+  .hero-id { transform-origin: left bottom; will-change: transform, opacity;
+    transform: translateY(calc(var(--p, 0) * -18px)) scale(calc(1 - var(--p, 0) * .22));
+    opacity: calc(1 - var(--p, 0) * .55); }
+  .mini {
+    position: fixed; inset: 0 0 auto 0; z-index: 50;
+    background: rgba(251, 250, 247, .9); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--line); box-shadow: 0 6px 20px -16px rgba(32, 42, 53, .35);
+    transform: translateY(-105%); opacity: 0; transition: transform .35s cubic-bezier(.2, .7, .2, 1), opacity .25s ease;
+  }
+  .mini.show { transform: none; opacity: 1; }
+  .mini-inner { max-width: 1120px; margin: 0 auto; padding: 9px 28px; display: flex; align-items: center; gap: 12px; }
+  .mini img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; object-position: center 30%; border: 1px solid var(--line); flex: none; }
+  .mini-name { font: 500 1.12rem/1.1 var(--serif); letter-spacing: -.02em; white-space: nowrap; }
+  .mini-role { color: var(--muted); font-size: .76rem; white-space: nowrap; }
+  .mini-where { margin-left: 14px; padding-left: 14px; border-left: 1px solid var(--line); color: var(--accent);
+    font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis; min-width: 0; transition: opacity .2s ease; }
+  .mini .btn { margin-left: auto; padding: 7px 14px; font-size: .8rem; flex: none; }
+  .section { margin-top: 76px; scroll-margin-top: 76px; }
+  .section-head {
+    display: grid; grid-template-columns: 180px 1fr; gap: 24px;
+    border-top: 1px solid var(--line); padding-top: 18px; margin-bottom: 30px;
+  }
+  .section-kicker { color: var(--accent); font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+  h2 { font: 500 clamp(1.8rem, 3vw, 2.45rem)/1.15 var(--serif); letter-spacing: -.035em; margin: -5px 0 0; }
+  .experience { display: grid; grid-template-columns: 230px 1fr; gap: 34px; padding: 0 0 38px; margin-bottom: 36px; border-bottom: 1px solid var(--line); }
+  .company { font-weight: 760; font-size: 1.03rem; }
+  .date { color: var(--muted); font-size: .83rem; margin-top: 5px; }
+  .location { color: var(--muted); font-size: .83rem; }
+  .role-title { font: 500 1.35rem/1.3 var(--serif); margin: 0 0 13px; }
+  .experience p { color: #53606b; margin: 0 0 13px; }
+  ul { margin: 0; padding-left: 1.15rem; }
+  li { padding-left: .2rem; margin: 7px 0; color: #485560; }
+  li::marker { color: var(--accent-2); }
+  details > summary { cursor: pointer; list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+  .expand-hint { display: block; color: var(--accent); font-size: .72rem; margin-top: 12px; letter-spacing: .04em; }
+
+  .experience-toggle { margin: 0 0 14px; scroll-margin-top: 76px; }
+  .progression { font-size: .82rem; color: var(--muted) !important; }
+  .progression span { color: var(--accent-2); margin: 0 4px; }
+  .career-break {
+    display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; align-items: baseline;
+    margin: 0 0 14px; padding: 12px 20px; border: 1px dashed #cfc8bb; border-radius: 12px; background: transparent;
+  }
+  .career-break .cb-title { font-size: .9rem; font-weight: 650; color: #485560; }
+  .career-break .cb-title span { color: var(--accent-2); margin-right: 6px; }
+  .career-break .sum-dates { font-size: .78rem; }
+  .career-break p { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: .84rem; }
+  .career-break a { color: var(--accent); font-weight: 600; }
+  .experience-toggle > summary {
+    display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; align-items: baseline;
+    background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px;
+  }
+  .experience-toggle > summary:hover, .experience-toggle[open] > summary { border-color: #b7c9c2; }
+  .sum-title { font-weight: 700; }
+  .sum-title .summary-separator { color: var(--accent-2); margin: 0 4px; }
+  .sum-title .sum-role { font-weight: 500; color: #53606b; }
+  .sum-dates { color: var(--muted); font-size: .8rem; white-space: nowrap; }
+  .sum-highlights { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .chip {
+    font-size: .74rem; font-weight: 650; color: var(--accent); background: var(--soft);
+    border-radius: 999px; padding: 3px 10px; line-height: 1.5;
+  }
+  .experience-toggle > summary::after {
+    content: "View details +"; grid-column: 1 / -1; color: var(--accent); font-size: .72rem; letter-spacing: .04em; margin-top: 4px;
+  }
+  .experience-toggle[open] > summary::after { content: "Hide details −"; }
+  .experience-toggle .experience { margin: 0; padding: 24px 12px 30px; border: 0; }
+
+  /* Approach */
+  .approach { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .approach-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; }
+  .approach-card h3 { font: 500 1.2rem/1.25 var(--serif); margin: 0 0 8px; }
+  .approach-card p { color: var(--muted); margin: 0; font-size: .92rem; }
+  .approach-lead { font: 500 clamp(1.1rem, 1.8vw, 1.3rem)/1.5 var(--serif); max-width: 820px; margin: 0 0 24px; color: var(--ink); }
+  .approach-lead em { font-style: normal; color: var(--accent); }
+  .approach-tag { color: var(--accent); font-size: .7rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 8px; }
+  .approach-card { display: flex; flex-direction: column; }
+  .approach-card ul { list-style: none; padding: 14px 0 0; margin: 16px 0 0; border-top: 1px solid var(--line); }
+  .approach-card li { margin: 0 0 8px; padding: 0; font-size: .84rem; line-height: 1.45; color: #485560; }
+  .approach-card li strong { color: var(--accent); }
+  .approach-drive { margin: 18px 0 0; color: var(--muted); font-size: .9rem; font-style: italic; }
+  .approach-drive span { font-style: normal; font-weight: 700; color: var(--ink); }
+  .toolbelt { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .toolbelt .chip { background: #fff; border: 1px solid var(--line); color: #485560; font-weight: 600; }
+
+  .education-list { border-top: 1px solid var(--line); }
+  .education-row { display: grid; grid-template-columns: 1fr auto; gap: 2px 20px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .education-row strong { font-size: 1rem; }
+  .education-row .edu-school { color: #53606b; font-size: .92rem; }
+  .education-row .edu-meta { color: var(--muted); font-size: .9rem; text-align: right; white-space: nowrap; }
+  .education-row .edu-score { display: block; color: var(--accent); font-weight: 700; font-size: .85rem; }
+  .recognition-lead {
+    display: flex; gap: 22px; align-items: center; background: var(--panel); border: 1px solid var(--line);
+    border-left: 4px solid var(--accent-2); border-radius: 14px; padding: 20px 24px; margin-bottom: 18px;
+  }
+  .recognition-lead .big { font: 500 2.4rem/1 var(--serif); color: var(--accent); letter-spacing: -.04em; white-space: nowrap; }
+  .recognition-lead p { margin: 0; color: #485560; }
+  .recognition-lead strong { color: var(--ink); }
+
+  .closing {
+    margin-top: 78px; border-radius: 18px; padding: 34px 38px;
+    background: var(--accent); color: #f7f7f2; display: flex;
+    align-items: center; justify-content: space-between; gap: 28px;
+  }
+  .closing h2 { color: #fff; margin: 0; max-width: 620px; }
+  .closing p { color: #d8e4de; margin: 9px 0 0; }
+  .closing .btn { border-color: #fff; color: var(--accent); background: #fff; white-space: nowrap; }
+  footer {
+    padding-top: 24px; margin-top: 28px; border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: .78rem;
+  }
+
+  /* Beyond work */
+  .personal-intro {
+    display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    gap: 30px; align-items: end; margin-bottom: 25px;
+  }
+  .personal-intro p { color: #53606b; margin: 0; max-width: 680px; }
+  .journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .journal-card {
+    overflow: hidden; border: 1px solid var(--line); border-radius: 16px;
+    background: var(--panel); display: flex; flex-direction: column;
+  }
+  .journal-card[open] { border-color: #b7c9c2; }
+  .journal-card img { display: block; width: 100%; height: 245px; object-fit: cover; }
+  .journal-card .journal-copy { padding: 20px 20px 22px; }
+  .journal-card .journal-tag {
+    color: var(--accent); font-size: .68rem; text-transform: uppercase;
+    letter-spacing: .13em; font-weight: 800; margin-bottom: 8px;
+  }
+  .journal-card h3 { font: 500 1.35rem/1.2 var(--serif); margin: 0; }
+  .journal-card > summary .expand-hint { margin-top: 8px; }
+  .journal-expanded { color: var(--muted); margin: 0; padding: 0 22px 22px; font-size: .92rem; }
+  .journal-note { margin-top: 18px; color: var(--muted); font-size: .84rem; }
+
+  @media (max-width: 960px) {
+    .pillars { grid-template-columns: repeat(2, 1fr); }
+    .approach { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 760px) {
+    .page { padding: 22px 16px 42px; }
+    .topline nav { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 30px; padding: 44px 0 34px; }
+    .contact { border-left: 0; border-top: 1px solid var(--line); padding: 22px 0 0; display: grid; grid-template-columns: 1fr 1fr; }
+    .contact .portrait-wrap { grid-column: 1 / -1; }
+    .portrait { max-width: 220px; }
+    .pillars { margin-bottom: 58px; }
+    .section-head { grid-template-columns: 1fr; gap: 12px; }
+    .experience { grid-template-columns: 1fr; gap: 14px; }
+    .personal-intro { grid-template-columns: 1fr; }
+    .journal-grid { grid-template-columns: 1fr; }
+    .journal-card img { height: 260px; }
+    .recognition-lead { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .closing { align-items: flex-start; flex-direction: column; padding: 28px 24px; }
+    footer { flex-direction: column; }
+  }
+  @media (max-width: 760px) {
+    .mini-inner { padding: 8px 16px; gap: 10px; }
+    .mini-role { display: none; }
+    .mini-where { margin-left: 4px; padding-left: 10px; font-size: .64rem; letter-spacing: .1em; }
+    .education-row { grid-template-columns: 1fr; }
+    .experience-toggle > summary, .career-break { grid-template-columns: 1fr; }
+    .sum-dates { order: -1; font-size: .74rem; }
+    .education-row .edu-meta { text-align: left; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .hero-id { transform: none; opacity: 1; }
+    .mini { transition: none; }
+  }
+  @media (max-width: 480px) {
+    .mini .btn { display: none; }
+    .pillars { grid-template-columns: 1fr; }
+    .contact { grid-template-columns: 1fr; }
+  }
+  @media print {
+    @page { size: A4; margin: 15mm 14mm; }
+    body { background: #fff; font-size: 9.5pt; }
+    .page { max-width: none; padding: 0; }
+    .topline nav, .hero-cta, .expand-hint, .experience-toggle > summary::after, .mini { display: none; }
+    .hero-id { transform: none; opacity: 1; }
+    .hero { padding: 26px 0 22px; gap: 25px; }
+    h1 { font-size: 42pt; }
+    .portrait { max-width: 140px; }
+    .pillars { margin-bottom: 30px; border-radius: 8px; }
+    .pillar { padding: 12px; }
+    .pillar-number { font-size: 20pt; }
+    .section { margin-top: 30px; }
+    .section-head { grid-template-columns: 130px 1fr; margin-bottom: 16px; }
+    .experience { grid-template-columns: 155px 1fr; gap: 20px; padding-bottom: 14px; margin-bottom: 14px; break-inside: avoid; }
+    .approach-card { break-inside: avoid; padding: 14px; }
+    .journal-grid { gap: 8px; }
+    .journal-card img { height: 130px; }
+    .closing { margin-top: 30px; padding: 22px; break-inside: avoid; }
+    a { text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="mini" id="mini" aria-hidden="true">
+  <div class="mini-inner">
+    <a href="#top" tabindex="-1"><img id="mini-portrait" alt=""></a>
+    <div>
+      <div class="mini-name">Pardeep Kumar</div>
+      <div class="mini-role">Enterprise Software Architect</div>
+    </div>
+    <div class="mini-where" id="mini-where">At a glance</div>
+    <a class="btn btn-primary" href="mailto:pradeepalhan@gmail.com" tabindex="-1">Get in touch ↗</a>
+  </div>
+</div>
+<main class="page" id="top">
+  <div class="topline">
+    <span class="mark"><span class="mark-dot"></span> Portfolio / Résumé</span>
+    <nav aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#approach">How I build</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#beyond-work">Beyond work</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Engineering · Technology · Domain · Leadership</p>
+      <div class="hero-id">
+        <h1>Pardeep<br>Kumar</h1>
+        <p class="role">Enterprise Software Architect</p>
+      </div>
+      <p class="positioning">16+ years designing and building <em>high-volume billing, charging and supply-chain systems</em>, now using AI to make engineering teams measurably faster.</p>
+      <p class="intro">My career has been spent on systems where performance, reliability and scale can’t be traded away: real-time charging for leading telcos, billing for 60+ global clients, store fulfilment for a large retail network. I take them down to their core, question how they’re built and re-architect them to run faster and hold up in production. Today I bring AI into that work, from RAG on production codebases to AI-assisted testing.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:pradeepalhan@gmail.com">Get in touch ↗</a>
+        <a class="btn btn-ghost" href="Pardeep_Kumar_Resume.pdf" download>Download résumé (PDF)</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/pardeep-kumar-74549517/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+    <aside class="contact" aria-label="Contact details">
+      <div class="portrait-wrap"><img class="portrait" src="assets/portrait.jpg" alt="Portrait of Pardeep Kumar"></div>
+      <div><strong>Based in</strong>Pune, India</div>
+      <div><strong>Email</strong><a href="mailto:pradeepalhan@gmail.com">pradeepalhan@gmail.com</a></div>
+      <div><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/pardeep-kumar-74549517/" target="_blank" rel="noopener noreferrer">linkedin.com/in/pardeep-kumar-74549517</a></div>
+    </aside>
+  </header>
+
+  <div class="pillars-head">
+    <p class="eyebrow">At a glance</p>
+    <span>Four disciplines, each backed by delivered work.</span>
+  </div>
+  <section class="pillars" aria-label="Key achievements by discipline">
+    <article class="pillar">
+      <div class="pillar-label">Engineering</div>
+      <div class="pillar-q">How I build</div>
+      <div class="pillar-number">60%</div>
+      <div class="pillar-caption">faster payment jobs, the latest of several runtime cuts</div>
+      <ul>
+        <li>Repeated <strong>50%+</strong> runtime reductions across multiple systems</li>
+        <li>Billing implementation cut from <strong>9 days to 4</strong></li>
+        <li>Stateless wallet offloading <strong>high-volume events</strong> from a core charging system</li>
+        <li>Runbooks automated for <strong>43 jobs</strong></li>
+      </ul>
+      <div class="pillar-where">See <a href="#exp-mphasis">Mphasis</a> · <a href="#exp-amdocs">Amdocs</a></div>
+    </article>
+    <article class="pillar">
+      <div class="pillar-label">Technology</div>
+      <div class="pillar-q">What I bring in</div>
+      <div class="pillar-number">#1 <small>of 60+</small></div>
+      <div class="pillar-caption">teams in a company-wide AI hackathon</div>
+      <ul>
+        <li><strong>80% lower</strong> development cost through AI-led DSP development</li>
+        <li><strong>RAG</strong> on production codebases; building with <strong>agentic AI</strong></li>
+        <li>AI-assisted QA platform, <strong>90%+</strong> bill matching in feasibility demos</li>
+      </ul>
+      <div class="pillar-where">See <a href="#exp-mphasis">Mphasis</a> · <a href="#exp-peopletech">PeopleTech</a></div>
+    </article>
+    <article class="pillar">
+      <div class="pillar-label">Domain</div>
+      <div class="pillar-q">Where I’ve done it</div>
+      <div class="pillar-number">3</div>
+      <div class="pillar-caption">industries: telecom, supply chain, automotive</div>
+      <ul>
+        <li>Billing &amp; charging for <strong>60+ global</strong> clients, incl. <strong>Bell Canada</strong> and <strong>Korea Telecom</strong></li>
+        <li><strong>Store fulfilment</strong> &amp; demand processing for a large retail network</li>
+        <li>Re-architected an automotive <strong>HMI</strong> to <strong>AUTOSAR</strong> standards, with cross-platform modules on <strong>QNX &amp; Windows</strong></li>
+      </ul>
+      <div class="pillar-where">See <a href="#exp-amdocs">Amdocs</a> · <a href="#exp-blueyonder">Blue Yonder</a> · <a href="#exp-peopletech">PeopleTech</a></div>
+    </article>
+    <article class="pillar">
+      <div class="pillar-label">Leadership</div>
+      <div class="pillar-q">How I lead</div>
+      <div class="pillar-number">16+ <small>yrs</small></div>
+      <div class="pillar-caption">from engineer to architecture &amp; product ownership</div>
+      <ul>
+        <li>Led <strong>8 senior engineers</strong> on a core charging module</li>
+        <li>Established and led a <strong>5-developer team</strong> in India for a product used by 60+ clients</li>
+        <li>Architecture, product ownership &amp; <strong>stakeholder demos</strong></li>
+      </ul>
+      <div class="pillar-where">See <a href="#exp-mphasis">Mphasis</a> · <a href="#exp-amdocs">Amdocs</a></div>
+    </article>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="section-head">
+      <div class="section-kicker">01 / Experience</div>
+      <h2>Building systems.<br>Solving real problems.</h2>
+    </div>
+
+    <details class="experience-toggle" id="exp-mphasis" open>
+      <summary>
+        <span class="sum-title">Mphasis<span class="summary-separator">·</span><span class="sum-role">Lead System Architect</span></span>
+        <span class="sum-dates">Nov 2025 — Present</span>
+        <span class="sum-highlights"><span class="chip">60% faster payment jobs</span><span class="chip">RAG on production code</span><span class="chip">AI-assisted QA</span></span>
+      </summary>
+      <article class="experience">
+        <div>
+          <div class="company">Mphasis</div>
+          <div class="date">Nov 2025 — Present</div>
+          <div class="location">Pune, India</div>
+        </div>
+        <div>
+          <h3 class="role-title">Lead System Architect</h3>
+          <p>Designing enterprise telecom solutions, from scalable system architectures to AI-powered knowledge platforms, across solution architecture, delivery and product ownership.</p>
+          <ul>
+            <li><strong>Performance &amp; automation:</strong> Cut payment-job runtimes by 60% through AI-assisted design, development and testing, and automated runbook generation for 43 jobs.</li>
+            <li><strong>Bill presentment:</strong> Built a bill-presentment platform with bill-format replication and pixel-level comparison, reaching 90%+ matching in feasibility demonstrations on a sample population.</li>
+            <li><strong>Quality engineering:</strong> Built an AI-assisted QA platform for rule-based bill-PDF validation and took it to demo and UAT readiness with CI/CD and deployment packaging.</li>
+            <li><strong>AI &amp; RAG:</strong> Built retrieval-augmented generation capabilities and applied them to engineering workflows grounded in production codebases.</li>
+            <li><strong>Technical leadership:</strong> Produced billing architecture artefacts and prototypes, presented solutions to stakeholders, and ran technical sessions and workshops on engineering practice.</li>
+          </ul>
+        </div>
+      </article>
+    </details>
+
+    <div class="career-break" data-label="Experience · Career break">
+      <span class="cb-title"><span>◦</span>Deliberate career break · Yoga &amp; self-discovery</span>
+      <span class="sum-dates">Nov 2024 — Nov 2025</span>
+      <p>A planned year to deepen my yoga practice and step back to reflect. <a href="#beyond-work">More in Beyond Work</a></p>
+    </div>
+
+    <details class="experience-toggle" id="exp-peopletech">
+      <summary>
+        <span class="sum-title">PeopleTech Group<span class="summary-separator">·</span><span class="sum-role">Technical Lead</span></span>
+        <span class="sum-dates">Feb 2024 — Nov 2024</span>
+        <span class="sum-highlights"><span class="chip">80% lower dev cost</span><span class="chip">AUTOSAR HMI redesign</span><span class="chip">Windows + QNX</span></span>
+      </summary>
+      <article class="experience">
+        <div>
+          <div class="company">PeopleTech Group</div>
+          <div class="date">Feb 2024 — Nov 2024</div>
+          <div class="location">Hyderabad, India</div>
+        </div>
+        <div>
+          <h3 class="role-title">Technical Lead</h3>
+          <ul>
+            <li>Redesigned the architecture of an automotive HMI application for a leading North American client, aligning it with AUTOSAR and improving resilience and performance.</li>
+            <li>Built a standalone module controlling brightness across multiple car screens, running on both Windows and QNX.</li>
+            <li>Built a cross-platform Digital Signal Processing (DSP) system through AI-led development, reducing development cost by 80%.</li>
+          </ul>
+        </div>
+      </article>
+    </details>
+
+    <div class="career-break" data-label="Experience · Career break">
+      <span class="cb-title"><span>◦</span>Deliberate career break · Triathlon</span>
+      <span class="sum-dates">Dec 2023 — Feb 2024</span>
+      <p>Time set aside to train for and race triathlon. <a href="#beyond-work">More in Beyond Work</a></p>
+    </div>
+
+    <details class="experience-toggle" id="exp-blueyonder">
+      <summary>
+        <span class="sum-title">Blue Yonder<span class="summary-separator">·</span><span class="sum-role">Lead Software Engineer</span></span>
+        <span class="sum-dates">Sep 2020 — Dec 2023</span>
+        <span class="sum-highlights"><span class="chip">Store-fulfilment engine</span><span class="chip">Multipack SKU algorithm</span><span class="chip">C++ · Python · Azure</span></span>
+      </summary>
+      <article class="experience">
+        <div>
+          <div class="company">Blue Yonder</div>
+          <div class="date">Sep 2020 — Dec 2023</div>
+          <div class="location">Bengaluru, India</div>
+        </div>
+        <div>
+          <h3 class="role-title">Lead Software Engineer</h3>
+          <ul>
+            <li>Developed a Dockerized, Dask-driven store-fulfilment engine (C++ and Python, batch on Azure) optimising supply-chain operations for a large retail network.</li>
+            <li>Designed the algorithm for multipack SKUs, reducing manual intervention and improving order accuracy.</li>
+            <li>Engineered C++ demand-density processing within the Luminate ecosystem, connecting implementation with supply-chain modelling concepts.</li>
+            <li>Resolved production issues through runtime analysis and root-cause investigation alongside domain and modelling experts.</li>
+            <li>Automated build and test workflows with GitHub Actions and supported deployments across multiple client environments.</li>
+          </ul>
+        </div>
+      </article>
+    </details>
+
+    <details class="experience-toggle" id="exp-amdocs">
+      <summary>
+        <span class="sum-title">Amdocs<span class="summary-separator">·</span><span class="sum-role">Software Engineering &amp; Technical Leadership</span></span>
+        <span class="sum-dates">Aug 2010 — Mar 2020</span>
+        <span class="sum-highlights"><span class="chip">Led 8 senior engineers</span><span class="chip">60+ global clients</span><span class="chip">9 → 4 days billing</span></span>
+      </summary>
+      <article class="experience">
+        <div>
+          <div class="company">Amdocs</div>
+          <div class="date">Aug 2010 — Mar 2020</div>
+          <div class="location">Pune, India</div>
+        </div>
+        <div>
+          <h3 class="role-title">Software Engineering &amp; Technical Leadership</h3>
+          <p class="progression">Software Developer <span>→</span> Senior Software Developer <span>→</span> Team Lead <span>→</span> Software Development Specialist</p>
+          <p>Nearly a decade across telecom charging, billing and document-processing systems.</p>
+          <ul>
+            <li>Led eight senior engineers building a stateless wallet module that offloaded high-volume events from a core charging system.</li>
+            <li>Technical specialist on Turbo Charging, a C++ real-time telecom charging system; earlier led a team of four building new charging functionality.</li>
+            <li>Established and led a five-developer team in India for Amdocs Document Designer, modernised build and release with continuous delivery, and owned the product lifecycle for 60+ global clients.</li>
+            <li>Led end-of-cycle billing automation for Bell Canada, XLcom and Telkomcel, and reduced EOC billing implementation effort from nine days to four.</li>
+            <li>As Product Support Lead for live charging systems at leading APAC telcos, tuned production performance end to end: JVM garbage-collection tuning of the in-memory data grid (IMDG) behind Korea Telecom’s charging system, plus hypervisor-level diagnostics and tuning.</li>
+            <li>Designed a web-service contract-management system for telecom retail stores, and moved bills from static PDF to interactive online formats.</li>
+          </ul>
+        </div>
+      </article>
+    </details>
+  </section>
+
+  <section class="section" id="approach">
+    <div class="section-head">
+      <div class="section-kicker">02 / How I build</div>
+      <h2>Deep in the domain.<br>Native to AI and cloud.</h2>
+    </div>
+    <p class="approach-lead">I deliver complex systems that live deep inside their domain, from real-time charging and billing to retail fulfilment and in-vehicle software, designed from the start to be <em>AI‑native</em>, <em>cloud‑native</em> and <em>run as a service</em>.</p>
+    <div class="approach">
+      <div class="approach-card">
+        <div class="approach-tag">AI-native</div>
+        <h3>AI in the system and in how it’s built</h3>
+        <p>Not bolted on at the end: designed into the product and into the engineering workflow.</p>
+        <ul>
+          <li>RAG over production codebases</li>
+          <li>AI-assisted QA for bill-PDF validation</li>
+          <li><strong>80%</strong> lower development cost through AI-led development</li>
+          <li><strong>#1 of 60+</strong> teams, TechShift AI Hackathon</li>
+        </ul>
+      </div>
+      <div class="approach-card">
+        <div class="approach-tag">Cloud-native</div>
+        <h3>Containerised, automated, built to scale out</h3>
+        <p>Systems that deploy repeatably and scale with the workload, not with manual effort.</p>
+        <ul>
+          <li>Dockerized, Dask-driven fulfilment engine on <strong>Azure</strong></li>
+          <li>CI/CD with GitHub Actions; deployment packaging to UAT</li>
+          <li>Repeated <strong>50%+</strong> runtime reductions</li>
+        </ul>
+      </div>
+      <div class="approach-card">
+        <div class="approach-tag">SaaS</div>
+        <h3>One platform, many customers</h3>
+        <p>Built to be configured rather than forked, and operated reliably across client environments.</p>
+        <ul>
+          <li>Blue Yonder <strong>Luminate</strong> across multiple client environments</li>
+          <li>Amdocs products serving <strong>60+</strong> global clients</li>
+          <li>Live production support for leading APAC telcos</li>
+        </ul>
+      </div>
+    </div>
+    <p class="approach-drive"><span>What drives it:</span> drawn to hard problems, taking systems down to their core, and always asking what can be done better.</p>
+    <div class="toolbelt" aria-label="Areas of expertise">
+      <span class="chip">High-volume transaction processing</span>
+      <span class="chip">Distributed systems</span>
+      <span class="chip">Performance optimisation</span>
+      <span class="chip">JVM GC &amp; IMDG tuning</span>
+      <span class="chip">C++ · C · Python</span>
+      <span class="chip">RAG</span>
+      <span class="chip">Agentic AI</span>
+      <span class="chip">Spec-driven development</span>
+      <span class="chip">Test automation</span>
+      <span class="chip">Azure · Docker · Dask</span>
+      <span class="chip">GitHub Actions · CI/CD</span>
+      <span class="chip">QNX · AUTOSAR</span>
+      <span class="chip">Solution architecture</span>
+      <span class="chip">Product ownership</span>
+      <span class="chip">Root-cause analysis</span>
+    </div>
+  </section>
+
+  <section class="section" id="recognition">
+    <div class="section-head">
+      <div class="section-kicker">03 / Recognition</div>
+      <h2>Good work, recognised.</h2>
+    </div>
+    <div class="recognition-lead">
+      <div class="big">1st</div>
+      <p><strong>Winner, TechShift AI Hackathon</strong>: placed first among 60+ teams in a company-wide hackathon.</p>
+    </div>
+    <ul>
+      <li>Recognised for technical contributions and client delivery across enterprise software engagements.</li>
+      <li>Selected for the Kendriya Vidyalaya National Sports Meet in volleyball.</li>
+      <li>Led volunteer voter-registration activities supporting more than 10,000 registrations.</li>
+      <li>Yoga teaching experience at NKBA Badminton Academy; further yoga education through Kaivalyadhama.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="education">
+    <div class="section-head">
+      <div class="section-kicker">04 / Education</div>
+      <h2>Foundations.</h2>
+    </div>
+    <div class="education-list">
+      <div class="education-row">
+        <div><strong>B.Tech, Computer Engineering</strong><div class="edu-school">National Institute of Technology, Kurukshetra</div></div>
+        <div class="edu-meta">2006–2010</div>
+      </div>
+      <div class="education-row">
+        <div><strong>Senior Secondary (Class XII), CBSE</strong><div class="edu-school">Kendriya Vidyalaya, AFS Bidar</div></div>
+        <div class="edu-meta"><span class="edu-score">76%</span></div>
+      </div>
+      <div class="education-row">
+        <div><strong>Secondary (Class X), CBSE</strong><div class="edu-school">Kendriya Vidyalaya, AFS Bidar</div></div>
+        <div class="edu-meta"><span class="edu-score">86%</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="beyond-work">
+    <div class="section-head">
+      <div class="section-kicker">05 / Beyond Work</div>
+      <h2>A life outside the job title.</h2>
+    </div>
+    <div class="personal-intro">
+      <div>
+        <p class="eyebrow">Endurance · Exploration · Practice</p>
+        <h3 class="role-title">A separate world, worth exploring.</h3>
+      </div>
+      <p>There’s a world beyond the systems I build and the problems I solve professionally. It started on the volleyball court, where I was selected for the Kendriya Vidyalaya Nationals, and today I find it in the mountains, on long rides and runs, and through the practice and teaching of yoga. These pursuits have their own place in my life, while inevitably shaping how I see the world and approach what I do.</p>
+    </div>
+    <div class="journal-grid">
+      <details class="journal-card"><summary><img src="assets/triathlon.jpg" alt="Pardeep at a triathlon finish area with his road bicycle" loading="lazy"><div class="journal-copy"><div class="journal-tag">Endurance</div><h3>Triathlon &amp; cycling</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">Training, race-day experiences and the gradual process of finding out what the body can do.</p></details>
+      <details class="journal-card"><summary><img src="assets/running.jpg" alt="Pardeep running during an endurance event" loading="lazy"><div class="journal-copy"><div class="journal-tag">On the move</div><h3>Running &amp; the outdoors</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">Long efforts, open roads and time spent moving through the world at a different pace.</p></details>
+      <details class="journal-card"><summary><img src="assets/yoga.jpg" alt="A group participating in a yoga session at a sports academy" loading="lazy"><div class="journal-copy"><div class="journal-tag">Practice &amp; teaching</div><h3>Yoga</h3><span class="expand-hint">Open field note</span></div></summary><p class="journal-expanded">Learning, teaching and continuing to explore a practice that makes room for both discipline and curiosity.</p></details>
+    </div>
+    <p class="journal-note">A living collection of experiences, stories and photographs.</p>
+  </section>
+
+  <section class="closing">
+    <div>
+      <h2>Practical by instinct.<br>Technical by foundation.</h2>
+      <p>Looking for roles where deep engineering and AI meet real business outcomes.</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="mailto:pradeepalhan@gmail.com">Get in touch ↗</a><a class="btn" href="Pardeep_Kumar_Resume.pdf" download style="background:transparent;color:#fff">Résumé PDF ↓</a></div>
+  </section>
+
+  <footer>
+    <span>Pardeep Kumar · Enterprise Software Architect</span>
+    <span>Engineering by profession. Curiosity beyond it.</span>
+  </footer>
+</main>
+<script>
+  // Open the matching experience entry when a pillar link (or URL hash) points to it.
+  function openFromHash() {
+    var el = location.hash && document.querySelector(location.hash);
+    if (el && el.tagName === 'DETAILS') el.open = true;
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
+
+  // Condense the hero headline on scroll and hand over to the compact header,
+  // which also names the section currently being read.
+  (function () {
+    var hero = document.querySelector('.hero'), heroId = document.querySelector('.hero-id'),
+        name = heroId.querySelector('h1'), mini = document.getElementById('mini'),
+        where = document.getElementById('mini-where');
+    document.getElementById('mini-portrait').src = document.querySelector('.portrait').src;
+
+    var markers = [{ el: document.querySelector('.pillars-head'), label: 'At a glance' }];
+    document.querySelectorAll('.section[id], .experience-toggle, .career-break').forEach(function (el) {
+      var label = el.dataset.label;
+      if (!label && el.classList.contains('section')) {
+        var k = el.querySelector('.section-kicker');
+        label = k ? k.textContent.split('/').pop().trim() : '';
+      }
+      if (!label && el.classList.contains('experience-toggle')) {
+        label = 'Experience · ' + el.querySelector('.company').textContent.trim();
+      }
+      if (label) markers.push({ el: el, label: label });
+    });
+    markers.sort(function (a, b) {
+      return a.el.compareDocumentPosition(b.el) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+    });
+
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var h = hero.offsetHeight || 1;
+      var p = Math.min(1, Math.max(0, -hero.getBoundingClientRect().top / (h * 0.7)));
+      heroId.style.setProperty('--p', p.toFixed(3));
+
+      var show = name.getBoundingClientRect().bottom < 40;
+      mini.classList.toggle('show', show);
+      mini.setAttribute('aria-hidden', show ? 'false' : 'true');
+
+      var current = markers[0].label, line = mini.offsetHeight + 24, narrow = innerWidth <= 760;
+      for (var i = 0; i < markers.length; i++) {
+        if (markers[i].el.getBoundingClientRect().top <= line) current = markers[i].label;
+      }
+      if (narrow) current = current.split(' · ').pop();
+      if (where.textContent !== current) where.textContent = current;
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+  })();
+</script>
+</body>
+</html>
