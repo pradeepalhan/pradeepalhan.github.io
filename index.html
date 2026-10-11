@@ -198,7 +198,7 @@
     content: "View details +"; grid-column: 1 / -1; color: var(--accent); font-size: .72rem; letter-spacing: .04em; margin-top: 0.25rem;
   }
   .experience-toggle[open] > summary::after { content: "Hide details −"; }
-  .experience-toggle .experience { margin: 0; padding: 1.5rem 0.75rem 1.875rem; border: 0; }
+  .experience-toggle .experience { display: block; margin: 0; padding: 1.25rem 1.25rem 1.5rem; border: 0; max-width: 54rem; }
 
   /* Approach */
   .approach { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
@@ -385,9 +385,8 @@
       <div class="pillar-label">Engineering</div>
       <div class="pillar-q">How I build</div>
       <div class="pillar-number">60%</div>
-      <div class="pillar-caption">faster payment jobs, the latest of several runtime cuts</div>
+      <div class="pillar-caption">faster payment jobs, one of several 50%+ runtime cuts</div>
       <ul>
-        <li>Repeated <strong>50%+</strong> runtime reductions across multiple systems</li>
         <li>Billing implementation cut from <strong>9 days to 4</strong></li>
         <li><strong>Wallet</strong>: more charging capacity on the same hardware, <strong>saving millions</strong></li>
         <li><strong>Self-maintaining runbooks</strong>, generated and kept current across every active release</li>
@@ -410,11 +409,11 @@
       <div class="pillar-label">Domain</div>
       <div class="pillar-q">Where I’ve done it</div>
       <div class="pillar-number">3</div>
-      <div class="pillar-caption">industries: telecom, supply chain, automotive</div>
+      <div class="pillar-caption">industries, each at production scale</div>
       <ul>
-        <li>Billing &amp; charging for <strong>60+ global</strong> clients, incl. <strong>Bell Canada</strong> and <strong>Korea Telecom</strong></li>
-        <li><strong>Store fulfilment</strong> &amp; demand processing for a large retail network</li>
-        <li>Re-architected an automotive <strong>HMI</strong> to <strong>AUTOSAR</strong> standards, with cross-platform modules on <strong>QNX &amp; Windows</strong></li>
+        <li><strong>Telecom:</strong> billing &amp; charging for 60+ global clients, incl. Bell Canada and Korea Telecom</li>
+        <li><strong>Supply chain:</strong> store fulfilment &amp; demand processing for a large retail network</li>
+        <li><strong>Automotive:</strong> AUTOSAR-aligned HMI, with modules on QNX &amp; Windows</li>
       </ul>
       <div class="pillar-where">See <a href="#exp-amdocs">Amdocs</a> · <a href="#exp-blueyonder">Blue Yonder</a> · <a href="#exp-peopletech">PeopleTech</a></div>
     </article>
@@ -441,17 +440,11 @@
     <details class="experience-toggle" id="exp-mphasis" open>
       <summary>
         <span class="sum-title">Mphasis<span class="summary-separator">·</span><span class="sum-role">Lead System Architect</span></span>
-        <span class="sum-dates">Nov 2025 — Present</span>
-        <span class="sum-highlights"><span class="chip">60% faster payment jobs</span><span class="chip">RAG on production code</span><span class="chip">AI-assisted QA</span></span>
+        <span class="sum-dates">Nov 2025 — Present · Pune</span>
+        <span class="sum-highlights"><span class="chip">Telecom billing</span><span class="chip">RAG · AI-assisted QA</span><span class="chip">Runbook automation</span></span>
       </summary>
       <article class="experience">
         <div>
-          <div class="company">Mphasis</div>
-          <div class="date">Nov 2025 — Present</div>
-          <div class="location">Pune, India</div>
-        </div>
-        <div>
-          <h3 class="role-title">Lead System Architect</h3>
           <p>Designing enterprise telecom solutions, from scalable system architectures to AI-powered knowledge platforms, across solution architecture, delivery and product ownership.</p>
           <ul>
             <li><strong>Performance:</strong> Cut payment-job runtimes by 60% through AI-assisted design, development and testing.</li>
@@ -465,26 +458,20 @@
       </article>
     </details>
 
-    <div class="career-break" data-label="Experience · Career break">
-      <span class="cb-title"><span>◦</span>Deliberate career break · Yoga &amp; self-discovery</span>
+    <div class="career-break" data-label="Experience · Yoga">
+      <span class="cb-title"><span>◦</span>Yoga &amp; self-discovery</span>
       <span class="sum-dates">Nov 2024 — Nov 2025</span>
-      <p>A planned year to deepen my yoga practice and step back to reflect. <a href="#beyond-work">More in Beyond Work</a></p>
+      <p>A planned year to deepen my practice and teaching. <a href="#beyond-work">Beyond Work</a></p>
     </div>
 
     <details class="experience-toggle" id="exp-peopletech">
       <summary>
         <span class="sum-title">PeopleTech Group<span class="summary-separator">·</span><span class="sum-role">Technical Lead</span></span>
-        <span class="sum-dates">Feb 2024 — Nov 2024</span>
-        <span class="sum-highlights"><span class="chip">80% lower dev cost</span><span class="chip">AUTOSAR HMI redesign</span><span class="chip">Windows + QNX</span></span>
+        <span class="sum-dates">Feb 2024 — Nov 2024 · Hyderabad</span>
+        <span class="sum-highlights"><span class="chip">Automotive HMI</span><span class="chip">AUTOSAR</span><span class="chip">QNX · Windows</span></span>
       </summary>
       <article class="experience">
         <div>
-          <div class="company">PeopleTech Group</div>
-          <div class="date">Feb 2024 — Nov 2024</div>
-          <div class="location">Hyderabad, India</div>
-        </div>
-        <div>
-          <h3 class="role-title">Technical Lead</h3>
           <ul>
             <li>Redesigned the architecture of an automotive HMI application for a leading North American client, aligning it with AUTOSAR and improving resilience and performance.</li>
             <li>Built a standalone module controlling brightness across multiple car screens, running on both Windows and QNX.</li>
@@ -494,26 +481,20 @@
       </article>
     </details>
 
-    <div class="career-break" data-label="Experience · Career break">
-      <span class="cb-title"><span>◦</span>Deliberate career break · Triathlon</span>
+    <div class="career-break" data-label="Experience · Triathlon">
+      <span class="cb-title"><span>◦</span>Triathlon</span>
       <span class="sum-dates">Dec 2023 — Feb 2024</span>
-      <p>Time set aside to train for and race triathlon. <a href="#beyond-work">More in Beyond Work</a></p>
+      <p>Training and racing. <a href="#beyond-work">Beyond Work</a></p>
     </div>
 
     <details class="experience-toggle" id="exp-blueyonder">
       <summary>
         <span class="sum-title">Blue Yonder<span class="summary-separator">·</span><span class="sum-role">Lead Software Engineer</span></span>
-        <span class="sum-dates">Sep 2020 — Dec 2023</span>
+        <span class="sum-dates">Sep 2020 — Dec 2023 · Bengaluru</span>
         <span class="sum-highlights"><span class="chip">Store-fulfilment engine</span><span class="chip">Multipack SKU algorithm</span><span class="chip">C++ · Python · Azure</span></span>
       </summary>
       <article class="experience">
         <div>
-          <div class="company">Blue Yonder</div>
-          <div class="date">Sep 2020 — Dec 2023</div>
-          <div class="location">Bengaluru, India</div>
-        </div>
-        <div>
-          <h3 class="role-title">Lead Software Engineer</h3>
           <ul>
             <li>Developed a Dockerized, Dask-driven store-fulfilment engine (C++ and Python, batch on Azure) optimising supply-chain operations for a large retail network.</li>
             <li>Designed the algorithm for multipack SKUs, reducing manual intervention and improving order accuracy.</li>
@@ -528,17 +509,11 @@
     <details class="experience-toggle" id="exp-amdocs">
       <summary>
         <span class="sum-title">Amdocs<span class="summary-separator">·</span><span class="sum-role">Software Engineering &amp; Technical Leadership</span></span>
-        <span class="sum-dates">Aug 2010 — Mar 2020</span>
-        <span class="sum-highlights"><span class="chip">Wallet: millions saved</span><span class="chip">60+ global clients</span><span class="chip">9 → 4 days billing</span></span>
+        <span class="sum-dates">Aug 2010 — Mar 2020 · Pune</span>
+        <span class="sum-highlights"><span class="chip">Real-time charging · C++</span><span class="chip">Bell Canada · Korea Telecom</span><span class="chip">Team lead</span></span>
       </summary>
       <article class="experience">
         <div>
-          <div class="company">Amdocs</div>
-          <div class="date">Aug 2010 — Mar 2020</div>
-          <div class="location">Pune, India</div>
-        </div>
-        <div>
-          <h3 class="role-title">Software Engineering &amp; Technical Leadership</h3>
           <p class="progression">Software Developer <span>→</span> Senior Software Developer <span>→</span> Team Lead <span>→</span> Software Development Specialist</p>
           <p>Nearly a decade across telecom charging, billing and document-processing systems.</p>
           <ul>
@@ -710,7 +685,7 @@
         label = k ? k.textContent.split('/').pop().trim() : '';
       }
       if (!label && el.classList.contains('experience-toggle')) {
-        label = 'Experience · ' + el.querySelector('.company').textContent.trim();
+        label = 'Experience · ' + el.querySelector('.sum-title').firstChild.textContent.trim();
       }
       if (label) markers.push({ el: el, label: label });
     });
